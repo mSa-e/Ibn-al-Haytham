@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ibn-al-Haytham</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- LOGIN -->
+    <div class="login-screen" id="loginScreen">
+      <div class="login-card">
+        <h1>University Portal</h1>
+        <p>Sign in to access your dashboard</p>
+        <form id="loginForm">
+          <div class="form-group">
+            <label>Username</label>
+            <input type="text" id="username" required />
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="password" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="dashboard" id="dashboard">
+      <div class="topbar">
+        <div class="brand">University Portal</div>
+        <div class="user-info">
+          <span id="userName"></span>
+          <span id="userRoleBadge" class="badge"></span>
+          <button
+            class="btn"
+            style="
+              background: var(--border);
+              font-size: 0.8rem;
+              padding: 0.4rem 0.8rem;
+            "
+            onclick="logout()"
+          >
+            Logout
+          </button>
+        </div>
+      </div>
+      <div class="layout">
+        <aside class="sidebar" id="sidebar"></aside>
+        <main class="main-content" id="mainContent"></main>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+MSYS2 UCRT64 build (run from the project root):
+
+gcc -std=c11 -Wall -Wextra -Wpedantic -O2 \
+  main.c \
+  DataStructures/Common/Node.c \
+  DataStructures/Dictionary/Entry.c DataStructures/Dictionary/Dictionary.c \
+  DataStructures/Lists/LinkedList.c DataStructures/Lists/Queue.c \
+  DataStructures/Trees/BinarySearchTree.c \
+  Networking/Nodes/Server.c Networking/Nodes/HTTPServer.c \
+  Networking/Protocols/HTTPRequest.c Systems/ThreadPool.c \
+  Portal/StrBuf.c Portal/Session.c Portal/StudentData.c Portal/Pages.c Portal/Portal.c \
+  -o libeom_server.exe -lws2_32
+
+Run: ./libeom_server.exe
+Open: http://localhost:8080/   (login: Haitham / 25010000)
